@@ -1,0 +1,28 @@
+.nav-write.active {
+  background: #065f46;
+  color: #fff;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Foto profil di navbar */
+img.avatar {
+  display: block;
+  object-fit: cover;
+  background: #e5e7eb;
+}
+
+/* Nama + foto di navbar kini berupa tautan langsung ke profil */
+a.nav-user-btn {
+  text-decoration: none;
+  color: inherit;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+a.nav-user-btn:hover {
+  background: #f3f4f6;
+}
+a.nav-user-btn.active .nav-user-name {
+  color: #065f46;
+}

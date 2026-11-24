@@ -1,0 +1,16 @@
+# Dependensi
+node_modules/
+
+# Rahasia / konfigurasi lokal
+.env
+.env.*
+!.env.example
+
+# File unggahan pengguna
+uploads/
+
+# Hasil build
+dist/
+
+# Log
+*.log

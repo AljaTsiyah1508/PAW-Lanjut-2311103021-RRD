@@ -1,0 +1,108 @@
+/* ---------- Area unggah foto (halaman tulis review) ---------- */
+.ph-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  padding: 26px 16px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #475569;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.ph-drop:hover,
+.ph-drop.on {
+  background: #ecfdf5;
+  border-color: #065f46;
+}
+.ph-drop svg {
+  color: #065f46;
+}
+.ph-drop strong {
+  font-size: 14px;
+  color: #111827;
+}
+.ph-drop small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.ph-title {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+.ph-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+}
+.ph-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+.ph-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ph-item button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(17, 24, 39, 0.72);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.ph-item button:hover {
+  background: #dc2626;
+}
+.ph-item.new::after {
+  content: "Baru";
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  background: #065f46;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+.ph-progress {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #065f46;
+  font-weight: 600;
+}
+
+/* ---------- Foto di kartu ulasan (semua foto, tidak dibatasi) ---------- */
+.dt-review-photos {
+  flex-wrap: wrap;
+}
+.dt-review-photos a {
+  display: block;
+  line-height: 0;
+}
+.dt-review-photos img {
+  transition: transform 0.15s;
+}
+.dt-review-photos a:hover img {
+  transform: scale(1.04);
+}
