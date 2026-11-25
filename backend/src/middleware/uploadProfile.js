@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
 
-const UPLOAD_ROOT = path.join(__dirname, "../../uploads");
+const UPLOAD_ROOT = require("../config/uploads");
 const PROFILE_DIR = path.join(UPLOAD_ROOT, "profiles");
 fs.mkdirSync(PROFILE_DIR, { recursive: true });
 

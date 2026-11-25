@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
 
-const UPLOAD_ROOT = path.join(__dirname, "../../uploads");
+const UPLOAD_ROOT = require("../config/uploads");
 const REVIEW_DIR = path.join(UPLOAD_ROOT, "reviews");
 const GALLERY_DIR = path.join(UPLOAD_ROOT, "gallery"); // galeri resmi destinasi (admin/pengelola)
 fs.mkdirSync(REVIEW_DIR, { recursive: true });
