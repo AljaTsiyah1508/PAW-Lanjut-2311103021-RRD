@@ -1,4 +1,5 @@
-const API_ORIGIN = "http://localhost:5000";
+// Alamat backend: VITE_API_URL saat online, localhost saat pengembangan
+export const API_ORIGIN = (import.meta.env.VITE_API_URL || "http://localhost:5000").replace(/[/]+$/, "");
 
 export const imgUrl = (path) => {
   if (!path) return null;

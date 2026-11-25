@@ -9,6 +9,8 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT,
   waitForConnections: true,
   connectionLimit: 10,
+  // Database online (mis. TiDB Cloud) mewajibkan TLS: isi DB_SSL=true
+  ...(process.env.DB_SSL === "true" ? { ssl: { minVersion: "TLSv1.2", rejectUnauthorized: true } } : {}),
 });
 
 module.exports = pool;
